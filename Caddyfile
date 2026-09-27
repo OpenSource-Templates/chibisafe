@@ -1,0 +1,6 @@
+:{$PORT} {
+	@api path /api/* /docs*
+	reverse_proxy @api {$BACKEND_URL}
+
+	reverse_proxy {$FRONTEND_URL}
+}
